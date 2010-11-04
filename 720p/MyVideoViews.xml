@@ -1,0 +1,102 @@
+<includes>
+
+	<!-- >>>>> WALL VIEW <<<<< /-->
+	<include name="WallViewImage">
+		<posy>0</posy>
+		<width>160</width>
+		<height>214</height>
+		<bordersize>5</bordersize>
+		<texture background="true">$INFO[ListItem.Thumb]</texture>
+		<aspectradio>stretch</aspectradio>
+	</include>
+
+	<include name="WallView">
+		<control type="group" id="50">
+			<defaultcontrol always="true">501</defaultcontrol>
+			<visible>Control.IsVisible(501)</visible>
+			
+			<control type="label">
+				<posx>150</posx>
+				<posy>10</posy>
+				<font>Small</font>
+				<textcolor>Red</textcolor>
+				<align>left</align>
+				<label>Wall View</label>
+			</control>
+		
+			<control type="panel" id="501">
+				<description>Wall view</description>
+				<viewtype label="5001">icon</viewtype>
+				<posx>MarginLeft</posx>
+				<posy>108</posy>
+				<width>ClientViewWidth</width>
+				<height>ClientViewHeight</height>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>100</scrolltime>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<visible>Container.Content(Movies)</visible>
+			
+				<itemlayout width="160" height="214">
+					<control type="image">
+						<description>Cover</description>
+						<include>WallViewImage</include>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posy>0</posy>
+						<width>160</width>
+						<height>214</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</itemlayout>
+			
+				<focusedlayout width="160" height="214">
+					<control type="image">
+						<description>Cover</description>
+						<include>WallViewImage</include>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posy>0</posy>
+						<width>160</width>
+						<height>214</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>[Control.IsVisible(50) + !Window.IsVisible(VideoFiles)] + Container.Content(Movies)</visible>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>MarginLeft</posx>
+				<posy>525</posy>
+				<height>85</height>
+				<width>ClientViewWidth</width>
+				<label>$INFO[ListItem.Label]</label>
+				<font>ViewsTitleFont</font>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>D0000000</shadowcolor>
+				<align>left</align>
+				<scroll>false</scroll>			
+			</control>
+			
+			<control type="label">
+				<description>Plot</description>
+				<posx>MarginLeft</posx>
+				<posy>595</posy>
+				<height>175</height>
+				<width>ClientViewWidth</width>
+				<label>$INFO[ListItem.PlotOutline]</label>
+				<include>DefaultFontProperties</include>
+				<wrapmultiline>true</wrapmultiline>			
+			</control>
+		</control>
+	</include>
+  
+</includes>

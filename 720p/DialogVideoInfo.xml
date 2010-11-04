@@ -1,0 +1,187 @@
+<window id="2003">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+	<controls>
+
+		<!--<include>DialogBack</include>-->
+		<include>Background</include>
+
+		<control type="label">
+			<include>DialogID</include>
+			<label>DialogVideoInfo.xml</label>
+		</control>
+
+		<!-- >>>>> COVER IMAGE <<<< -->
+		<control type="image" id="3">
+			<description>Cover Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>BigCoverProperties</include>
+			<texture>-</texture>
+			<!--<bordertexture border="14">ButtonNF.png</bordertexture>-->
+			<!--<bordersize>5</bordersize>-->
+		</control>
+
+		<!-- >>>>> TITLE <<<< -->
+		<control type="label" id="20">
+			<description>Title</description>
+			<posx>535</posx>
+			<posy>40</posy>
+			<width>665</width>
+			<label>$INFO[ListItem.Label]</label>
+			<include>TitleFontProperties</include>
+		</control>
+		
+		<!-- >>>>> RATING <<<< -->
+		<control type="label">
+			<description>Rating</description>
+			<posx>535</posx>
+			<posy>86</posy>
+			<width>55</width>
+			<label>$INFO[ListItem.Rating]</label>
+			<include>DefaultFontProperties</include>
+		</control>
+		
+		<!-- >>>>> DURATION <<<< -->
+		<control type="label">
+			<description>Duration</description>
+			<posx>635</posx>
+			<posy>86</posy>
+			<width>155</width>
+			<label>$INFO[ListItem.Duration]</label>
+			<include>DefaultFontProperties</include>
+		</control>
+		
+		<!-- >>>>> PLOT <<<< -->
+		<control type="textbox" id="4">
+			<description>Plot</description>
+			<posx>535</posx>
+			<posy>205</posy>
+			<width>665</width>
+			<height>222</height>
+			<include>DefaultFontProperties</include>
+		</control>
+		
+		<!-- >>>>> CAST <<<< -->
+		<control type="group">
+			<posx>535</posx>
+			<posy>435</posy>
+			<width>335</width>			
+			<include>DefaultFontProperties</include>
+
+			<control type="label">
+				<description>Cast</description>
+				<label>Cast</label>
+				<height>32</height>
+				<font>RegularBold</font>
+				<textcolor>Yellow</textcolor>
+			</control>
+
+			<control type="label">
+				<description>Cast</description>
+				<label>$INFO[ListItem.Cast]</label>
+				<posy>40</posy>
+				<height>115</height>
+			</control>				
+			
+		</control>
+		
+		<!-- >>>>> DIRECTOR <<<< -->
+		<control type="group">
+			<posx>875</posx>
+			<posy>435</posy>
+			<width>335</width>
+			<include>DefaultFontProperties</include>
+			
+			<control type="label">
+				<description>Director</description>
+				<label>Director</label>
+				<height>32</height>
+				<font>RegularBold</font>
+				<textcolor>Yellow</textcolor>
+			</control>
+
+			<control type="label">
+				<description>Cast</description>
+				<label>$INFO[ListItem.Director]</label>
+				<posy>40</posy>
+				<height>32</height>
+			</control>				
+		</control>
+		
+
+		<!--
+		<control type="grouplist" id="1">
+			<posx>10</posx>
+			<posy>190</posy>
+			<width>150</width>
+			<height>222</height>
+			<itemgap>2</itemgap>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<orientation>vertical</orientation>
+			<control type="button" id ="5">
+				<description>Plot/Cast</description>
+				<label>$LOCALIZE[206]</label>
+				<width>150</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="button" id ="8">
+				<description>Play</description>
+				<label>$LOCALIZE[208]</label>
+				<width>150</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="button" id ="9">
+				<description>Resume</description>
+				<label>$LOCALIZE[13404]</label>
+				<width>150</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="button" id ="6">
+				<description>Refresh</description>
+				<label>$LOCALIZE[184]</label>
+				<width>150</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="button" id ="10">
+				<description>Get Thumb</description>
+				<label>$LOCALIZE[13405]</label>
+				<width>150</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="button" id="11">
+				<description>Trailer button</description>
+				<label>$LOCALIZE[20410]</label>
+				<width>150</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="button" id="12">
+				<description>Fanart button</description>
+				<label>$LOCALIZE[20413]</label>
+				<width>150</width>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+		</control>
+		
+		-->
+
+	</controls>
+  
+</window>
