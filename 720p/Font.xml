@@ -1,0 +1,65 @@
+<fonts>
+	<fontset id="default" unicode="true">
+		<!-- Required for system -->
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Large</name>
+			<filename>TitilliumText22L-Regular.ttf</filename>
+			<size>48</size>
+		</font>
+		
+		<font>
+			<name>Regular</name>
+			<filename>TitilliumText22L-Regular.ttf</filename>
+			<size>16</size>
+		</font>
+		
+		<font>
+			<name>RegularBold</name>
+			<filename>TitilliumText22L-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+		
+		<font>
+			<name>HeaderTitleFont</name>
+			<filename>TitilliumText22L-XBold.ttf</filename>
+			<size>48</size>
+		</font>
+		
+		<font>
+			<name>HeaderSubTitleFont</name>
+			<filename>TitilliumText22L-Regular.ttf</filename>
+			<size>24</size>
+		</font>
+		
+		<font>
+			<name>IconFont</name>
+			<filename>TitilliumText22L-Bold.ttf</filename>
+			<size>40</size>
+		</font>
+		
+		<font>
+			<name>TimeFont</name>
+			<filename>TitilliumText22L-Bold.ttf</filename>
+			<size>22</size>
+		</font>
+		
+		<font>
+			<name>ViewsTitleFont</name>
+			<filename>TitilliumText22L-Bold.ttf</filename>
+			<size>32</size>
+		</font>
+		
+		<font>
+			<name>MovieInfoTitleFont</name>
+			<filename>TitilliumText22L-Bold.ttf</filename>
+			<size>34</size>
+		</font>
+
+	</fontset>
+</fonts>
