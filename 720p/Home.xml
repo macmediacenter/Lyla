@@ -1,0 +1,113 @@
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>Background</include>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>Home.xml</label>
+			<visible>false</visible>
+		</control>
+		
+		<!-- >>>>> Logo <<<<< -->
+		<include>Logo</include>
+		
+		<!-- >>>>> Time <<<<< -->
+		<control type="group" id="600">
+			<description>Local time</description>
+		    <posx>998</posx>
+			<posy>35</posy>
+			<include>ClockIcon</include>
+			<control type="label">
+				<description>Time</description>
+				<posx>34</posx>
+				<width>140</width>
+				<label>$INFO[System.Time]</label>
+				<font>TimeFont</font>
+				<textcolor>White</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>C0101010</shadowcolor>
+			</control>
+		</control>
+
+		<!-- >>>>> Menu <<<<< -->
+		<control type="list" id="300">
+			<description>Home Wraplist</description>
+			<posx>48</posx>
+			<posy>586</posy>
+			<width>1210</width>
+			<height>48</height>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<scrolltime>250</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<itemgap>0</itemgap>
+			<itemlayout width="400" height="40">	
+				<control type="label">
+					<posx>173</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<info>ListItem.Label</info>
+					<font>IconFont</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>D0000000</shadowcolor>
+					<align>center</align>
+					<scroll>false</scroll>
+				</control>
+			</itemlayout>
+			<focusedlayout width="400" height="40">
+				<control type="label">
+					<posx>173</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<info>ListItem.Label</info>
+					<font>IconFont</font>
+					<textcolor>fff3de2d</textcolor>
+					<shadowcolor>D0000000</shadowcolor>
+					<align>center</align>
+				</control>				
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Media</description>
+					<label>Media</label>
+					<icon>homeicons/apps.png</icon>
+					<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+				</item>
+				<item id="2">
+					<description>Appls</description>
+					<label>Apps</label>
+					<onclick>ActivateWindow(settings)</onclick>
+				</item>
+				<item id="9">
+					<description>Settings</description>
+					<label>$LOCALIZE[5]</label>
+					<onclick>ActivateWindow(settings)</onclick>
+				</item>
+				<item id="10">
+					<description>Refresh</description>
+					<label>$LOCALIZE[184]</label>
+					<onclick>XBMC.ReloadSkin()</onclick>
+				</item>
+			</content>
+		</control>
+
+		<control type="rss">
+			<description>RSS Feed</description>
+			<posx>0</posx>
+			<posy>545</posy>
+			<width>720</width>
+			<font>Small</font>
+			<urlset>1</urlset>
+			<titlecolor>Red</titlecolor>
+			<headlinecolor>White</headlinecolor>
+			<textcolor>White</textcolor>
+			<visible>false</visible>
+		</control>
+
+	</controls>
+  
+</window>

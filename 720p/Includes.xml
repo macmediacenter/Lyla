@@ -1,0 +1,89 @@
+<includes>
+  
+	<include file="Defaults.xml" />
+	<include file="IncludesObjects.xml" />
+	<include file="MyVideoViews.xml" />
+
+	<constant name="ScreenWidth">1280</constant>
+	<constant name="ScreenHeight">720</constant>
+	<constant name="MarginLeft">80</constant>
+	<constant name="ClientViewWidth">1120</constant>
+	<constant name="ClientViewHeight">475</constant>
+	<constant name="BigCoverWidth">487</constant>
+	<constant name="BigCoverHeight">720</constant>
+	
+	<include name="ScreenSize">
+		<width>ScreenWidth</width>
+		<height>ScreenHeight</height>
+	</include>
+
+	<include name="DialogBack">
+		<control type="image">
+			<width>520</width>
+			<height>424</height>
+			<texture>White.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+
+	<include name="DialogID">
+		<posx>10</posx>
+		<posy>10</posy>
+		<font>Small</font>
+		<textcolor>Red</textcolor>
+		<align>left</align>
+	</include>
+
+	<include name="WindowID">
+		<posx>10</posx>
+		<posy>10</posy>
+		<font>Small</font>
+		<textcolor>Red</textcolor>
+		<align>left</align>
+	</include>
+	
+	<include name="BackgroundFabric">
+		<texture>background/Fabric.png</texture>
+	</include>
+	
+	<include name="BackgroundColorful">
+		<texture>background/Colorful.png</texture>
+	</include>
+	
+	<include name="Background">
+		<control type="image">
+			<description>Background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>ScreenHeight</height>
+			<aspectratio>stretch</aspectratio>
+			<include>BackgroundFabric</include>
+		</control>
+	</include>
+	
+	<include name="ClockIcon">
+		<control type="image">
+			<description>Clock icon</description>
+			<texture>clock.png</texture>
+			<width>24</width>
+			<height>24</height>
+			<posx>6</posx>
+			<posy>5</posy>
+			<aspectratio>scale</aspectratio>
+		</control>
+	</include>
+	
+	<include name="Logo">
+		<control type="image">
+			<description>Logo</description>
+			<texture>Logo.png</texture>
+			<width>304</width>
+			<height>80</height>
+			<posx>64</posx>
+			<posy>15</posy>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+  
+</includes>
