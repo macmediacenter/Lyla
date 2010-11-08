@@ -8,6 +8,15 @@
 		<scroll>false</scroll>
 	</include>
 	
+	<include name="DefaultStrongFontProperties">
+		<font>RegularBold</font>
+		<textcolor>Yellow</textcolor>
+		<shadowcolor>MidGray</shadowcolor>
+		<align>left</align>
+		<aligny>top</aligny>
+		<scroll>false</scroll>
+	</include>
+	
 	<include name="BigCoverProperties">
 		<width>BigCoverWidth</width>
 		<height>BigCoverHeight</height>
@@ -17,6 +26,24 @@
 	<include name="TitleFontProperties">
 		<font>MovieInfoTitleFont</font>
 		<textcolor>White</textcolor>
+		<shadowcolor>MidGray</shadowcolor>
+		<align>left</align>
+		<aligny>top</aligny>
+		<scroll>false</scroll>		
+	</include>
+	
+	<include name="HeaderTitleFontProperties">
+		<font>HeaderTitleFont</font>
+		<textcolor>White</textcolor>
+		<shadowcolor>MidGray</shadowcolor>
+		<align>left</align>
+		<aligny>top</aligny>
+		<scroll>false</scroll>		
+	</include>
+	
+	<include name="HeaderSubTitleFontProperties">
+		<font>HeaderSubTitleFont</font>
+		<textcolor>Yellow</textcolor>
 		<shadowcolor>MidGray</shadowcolor>
 		<align>left</align>
 		<aligny>top</aligny>

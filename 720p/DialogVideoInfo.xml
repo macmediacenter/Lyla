@@ -74,18 +74,17 @@
 			<posx>535</posx>
 			<posy>435</posy>
 			<width>335</width>			
-			<include>DefaultFontProperties</include>
 
 			<control type="label">
 				<description>Cast</description>
 				<label>Cast</label>
 				<height>32</height>
-				<font>RegularBold</font>
-				<textcolor>Yellow</textcolor>
+				<include>DefaultStrongFontProperties</include>
 			</control>
 
 			<control type="label">
 				<description>Cast</description>
+				<include>DefaultFontProperties</include>
 				<label>$INFO[ListItem.Cast]</label>
 				<posy>40</posy>
 				<height>115</height>
@@ -104,12 +103,12 @@
 				<description>Director</description>
 				<label>Director</label>
 				<height>32</height>
-				<font>RegularBold</font>
-				<textcolor>Yellow</textcolor>
+				<include>DefaultStrongFontProperties</include>
 			</control>
 
 			<control type="label">
 				<description>Cast</description>
+				<include>DefaultFontProperties</include>
 				<label>$INFO[ListItem.Director]</label>
 				<posy>40</posy>
 				<height>32</height>

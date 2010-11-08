@@ -2,12 +2,14 @@
 
 	<!-- >>>>> WALL VIEW <<<<< /-->
 	<include name="WallViewImage">
-		<posy>0</posy>
-		<width>160</width>
-		<height>214</height>
-		<bordersize>5</bordersize>
+		<posx>10</posx>
+		<posy>10</posy>
+		<width>115</width>
+		<height>170</height>
 		<texture background="true">$INFO[ListItem.Thumb]</texture>
-		<aspectradio>stretch</aspectradio>
+		<bordertexture border="10">views/wall/item-nofocus.png</bordertexture>
+		<bordersize>10</bordersize>
+		<aspectradio aligny="top" scalediffuse="false">stretch</aspectradio>
 	</include>
 
 	<include name="WallView">
@@ -22,6 +24,7 @@
 				<textcolor>Red</textcolor>
 				<align>left</align>
 				<label>Wall View</label>
+				<visible>false</visible>
 			</control>
 		
 			<control type="panel" id="501">
@@ -35,24 +38,29 @@
 				<scrolltime>100</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
+				
 				<visible>Container.Content(Movies)</visible>
 			
-				<itemlayout width="160" height="214">
+				<itemlayout width="145" height="200">
+					<!--
+					<control type="image">
+						<description>Shadow</description>
+						<posy>0</posy>
+						<width>133</width>
+						<height>191</height>
+						<texture border="5">views/wall/item-nofocus.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<aligny>top</aligny>
+					</control>
+					//-->
 					<control type="image">
 						<description>Cover</description>
 						<include>WallViewImage</include>
-					</control>
-					<control type="image">
-						<description>Default Cover</description>
-						<posy>0</posy>
-						<width>160</width>
-						<height>214</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
 					</control>
 				</itemlayout>
 			
-				<focusedlayout width="160" height="214">
+				<focusedlayout width="145" height="200">
 					<control type="image">
 						<description>Cover</description>
 						<include>WallViewImage</include>
@@ -60,8 +68,8 @@
 					<control type="image">
 						<description>Default Cover</description>
 						<posy>0</posy>
-						<width>160</width>
-						<height>214</height>
+						<width>115</width>
+						<height>170</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>

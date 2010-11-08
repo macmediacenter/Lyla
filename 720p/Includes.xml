@@ -58,7 +58,7 @@
 			<width>ScreenWidth</width>
 			<height>ScreenHeight</height>
 			<aspectratio>stretch</aspectratio>
-			<include>BackgroundFabric</include>
+			<include>BackgroundColorful</include>
 		</control>
 	</include>
 	

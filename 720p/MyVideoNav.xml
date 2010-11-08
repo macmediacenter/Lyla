@@ -7,10 +7,38 @@
 
 	<include>Background</include>
 
-  <control type="label">
-    <include>WindowID</include>
-    <label>MyVideoNav.xml</label>
-  </control>
+	<control type="label">
+    	<include>WindowID</include>
+    	<label>MyVideoNav.xml</label>
+		<visible>false</visible>
+  	</control>
+
+	<!-- HEADER -->
+	<control type="group">
+		<posx>MarginLeft</posx>
+		
+		<control type="label">
+			<description>Title Section</description>
+			<label>Movies</label>
+			<posy>15</posy>
+			<width>375</width>
+			<height>48</height>
+			<include>HeaderTitleFontProperties</include>
+			<visible>Container.Content(Movies)</visible>
+		</control>
+		
+		<control type="label">
+			<description>SubTitle Section</description>
+			<label>All</label>
+			<posy>71</posy>
+			<width>375</width>
+			<height>48</height>
+			<include>HeaderSubTitleFontProperties</include>
+			<visible>Container.Content(Movies)</visible>
+		</control>
+	</control>
+
+	<include>WallView</include>
  
 <!--
 	<control type="grouplist" id="9000">
@@ -78,8 +106,6 @@
     </control>
 	</control> 
 //-->
-
-<include>WallView</include>
     
 </controls>
   
